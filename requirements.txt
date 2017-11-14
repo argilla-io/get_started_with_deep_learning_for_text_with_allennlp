@@ -1,0 +1,3 @@
+git+git://github.com/allenai/allennlp.git
+sklearn
+scipy

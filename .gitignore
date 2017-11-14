@@ -1,0 +1,4 @@
+*.egg-info
+recognai/__pycache__
+experiments/data/vectors
+experiments/output
