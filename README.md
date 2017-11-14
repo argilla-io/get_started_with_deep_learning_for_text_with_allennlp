@@ -64,13 +64,9 @@ Check the basic structure of these modules in AllenNLP.
 In the folder ``experiments/definitions/`` you can find the definition of our baseline, using a BagOfEmbeddingsEncoder.
 
 Run the experiment using:
-
+```shell
+python -m recognai.run train experiments/definitions/baseline_boe_classifier.json -s experiments/output/baseline
 ```
-
-python -m recognai.run train experiments/definitions/baseline_boe_classifier.json -s experiments/output/baseline 
-
-```
-
 
 ## Monitor your experiments using Tensorboard:
 
