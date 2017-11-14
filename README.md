@@ -72,7 +72,9 @@ python -m recognai.run train experiments/definitions/baseline_boe_classifier.jso
 
 You can monitor your experiments by running TensorBoard and pointing it to the experiments output folder:
 
-``tensorboard --logdir=experiments/output``
+```shell
+tensorboard --logdir=experiments/output
+```
 
 ## Defining and running a CNN classifier:
 
@@ -80,17 +82,23 @@ In the folder ``experiments/definitions/`` you can find the definition of a CNN 
 
 Run the experiment using:
 
-``python -m recognai.run train experiments/definitions/cnn_classifier.json -s experiments/output/cnn``
+```shell
+python -m recognai.run train experiments/definitions/cnn_classifier.json -s experiments/output/cnn
+```
 
 ## Using pre-trained word embeddings:
 
 Facebook fastText's team has made available pre-trained word embeddings for 294 languages (see https://github.com/facebookresearch/fastText/blob/master/pretrained-vectors.md). Using the ``download_prepare_fasttext.sh`` script, you can download the Spanish vectors and use them as pre-trained weights in either of the models.
 
 To use pre-trained embeddings, you can run the experiment using:
-``python -m recognai.run train experiments/definitions/cnn_classifier_fasttext_embeddings_fixed.json -s experiments/output/cnn_embeddings_fixed``
+```shell
+python -m recognai.run train experiments/definitions/cnn_classifier_fasttext_embeddings_fixed.json -s experiments/output/cnn_embeddings_fixed
+```
 
 Or use pre-trained embeddings and let the network tune their weights, using:
-``python -m recognai.run train experiments/definitions/cnn_classifier_fasttext_embeddings_tunable.json -s experiments/output/cnn_embeddings_tuned``
+```shell
+python -m recognai.run train experiments/definitions/cnn_classifier_fasttext_embeddings_tunable.json -s experiments/output/cnn_embeddings_tuned
+```
 
 ## Extra:
 
