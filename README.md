@@ -50,7 +50,8 @@ pip install tensorboard
 
 Download pre-trained  and prepare word vectors from fastText project:
 ```shell
-download_prepare_fasttext.sh``
+download_prepare_fasttext.sh
+```
 
 # Goals
 
