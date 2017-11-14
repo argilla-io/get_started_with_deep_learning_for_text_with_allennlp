@@ -14,28 +14,43 @@ The overall goal is to classify tweets in Spanish corresponding to the COSET cha
 
 Use a virtual environment, Conda for example:
 
-``conda create -n allennlp_spacy``
+```shell
+conda create -n allennlp_spacy
+```
 
-``source activate allennlp_spacy``
+```shell
+source activate allennlp_spacy
+```
 
 Install PyTorch for your platform:
-``pip3 install http://download.pytorch.org/whl/torch-0.2.0.post3-cp36-cp36m-macosx_10_7_x86_64.whl``
+```shell
+pip install http://download.pytorch.org/whl/torch-0.2.0.post3-cp36-cp36m-macosx_10_7_x86_64.whl
+```
 
 Install spaCy Spanish model:
-``python -m spacy download es``
+```shell
+python -m spacy download es
+```
 
 Install AllenNLP and other dependencies:
-``pip install -r requirements.txt``
+```shell
+pip install -r requirements.txt
+```
 
 Install custom module for running AllenNLP commands with custom models:
-``python setup.py develop``
+```shell
+python setup.py develop
+```
 
 Install Tensorboard:
-``pip install tensorboard``
+```shell
+pip install tensorboard
+```
 
 
 Download pre-trained  and prepare word vectors from fastText project:
-``download_prepare_fasttext.sh``
+```shell
+download_prepare_fasttext.sh``
 
 # Goals
 
