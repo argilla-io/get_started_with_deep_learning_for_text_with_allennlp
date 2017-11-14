@@ -65,13 +65,18 @@ In the folder ``experiments/definitions/`` you can find the definition of our ba
 
 Run the experiment using:
 
-``python -m recognai.run train experiments/definitions/baseline_boe_classifier.json -s experiments/output/baseline``
+```
+
+python -m recognai.run train experiments/definitions/baseline_boe_classifier.json -s experiments/output/baseline 
+
+```
+
 
 ## Monitor your experiments using Tensorboard:
 
 You can monitor your experiments by running TensorBoard and pointing it to the experiments output folder:
 
-`tensorboard --logdir=experiments/output``
+``tensorboard --logdir=experiments/output``
 
 ## Defining and running a CNN classifier:
 
