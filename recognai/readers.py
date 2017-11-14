@@ -45,15 +45,14 @@ class JsonlClassificationReader(DatasetReader):
     """
     Reads a file from a classification dataset.  This data is
     formatted as jsonl, one json-formatted instance per line.  The keys in the data are
-    "gold_label", "sentence1", and "sentence2".  We convert these keys into fields named "label",
-    "premise" and "hypothesis".
+    "gold_label", "input", which are configurable in the JSON definition.
 
     Parameters
     ----------
     tokenizer : ``Tokenizer``, optional (default=``WordTokenizer()``)
-        We use this ``Tokenizer`` for both the premise and the hypothesis.  See :class:`Tokenizer`.
+        See :class:`Tokenizer`.
     token_indexers : ``Dict[str, TokenIndexer]``, optional (default=``{"tokens": SingleIdTokenIndexer()}``)
-        We similarly use this for both the premise and the hypothesis.  See :class:`TokenIndexer`.
+        See :class:`TokenIndexer`.
     """
 
     def __init__(self,
@@ -122,16 +121,14 @@ class JsonlClassificationReader(DatasetReader):
 class CsvClassificationReader(DatasetReader):
     """
     Reads a file from a classification dataset.  This data is
-    formatted as jsonl, one json-formatted instance per line.  The keys in the data are
-    "gold_label", "sentence1", and "sentence2".  We convert these keys into fields named "label",
-    "premise" and "hypothesis".
-
+    formatted as jsonl, one json-formatted instance per line.  The positions in the CSV file can defined in
+    the JSON definition.
     Parameters
     ----------
     tokenizer : ``Tokenizer``, optional (default=``WordTokenizer()``)
-        We use this ``Tokenizer`` for both the premise and the hypothesis.  See :class:`Tokenizer`.
+         See :class:`Tokenizer`.
     token_indexers : ``Dict[str, TokenIndexer]``, optional (default=``{"tokens": SingleIdTokenIndexer()}``)
-        We similarly use this for both the premise and the hypothesis.  See :class:`TokenIndexer`.
+        See :class:`TokenIndexer`.
     """
 
     def __init__(self,
